@@ -1,0 +1,314 @@
+[
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_token1",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_fee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "pagePtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "endOffset",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancelOrder",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountCancelled",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "pagePtrs",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "endOffsets",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "cancelOrders",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "pagePtrs",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "endOffsets",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "claimOrders",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "startPagePtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        }
+      ],
+      "name": "matchExactThenProduce",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "startPagePtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        }
+      ],
+      "name": "matchLimitThenProduce",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        }
+      ],
+      "name": "matchLimitThenReturn",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "startPagePtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        }
+      ],
+      "name": "produceOrder",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "destToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "limitPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "quoteExactAmountIn",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "estimatedGas",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "limitPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "quoteExactAmountOut",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "estimatedGas",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+]

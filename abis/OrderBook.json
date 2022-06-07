@@ -106,44 +106,10 @@
     {
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "fromAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "destAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes32",
-          "name": "startPagePtr",
-          "type": "bytes32"
-        },
-        {
           "internalType": "address",
           "name": "fromToken",
           "type": "address"
-        }
-      ],
-      "name": "matchExactThenProduce",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
         },
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
         {
           "internalType": "uint256",
           "name": "fromAmount",
@@ -160,85 +126,12 @@
           "type": "bytes32"
         },
         {
-          "internalType": "address",
-          "name": "fromToken",
-          "type": "address"
-        }
-      ],
-      "name": "matchLimitThenProduce",
-      "outputs": [
-        {
           "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "",
+          "name": "maxCancels",
           "type": "uint256"
         }
       ],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "fromAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "destAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "address",
-          "name": "fromToken",
-          "type": "address"
-        }
-      ],
-      "name": "matchLimitThenReturn",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "fromAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "destAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes32",
-          "name": "startPagePtr",
-          "type": "bytes32"
-        },
-        {
-          "internalType": "address",
-          "name": "fromToken",
-          "type": "address"
-        }
-      ],
-      "name": "produceOrder",
+      "name": "makerOrder",
       "outputs": [],
       "stateMutability": "payable",
       "type": "function"
@@ -310,5 +203,152 @@
       ],
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "startPagePtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxCancels",
+          "type": "uint256"
+        }
+      ],
+      "name": "takeExactThenMake",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "limitPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "startPagePtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxCancels",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxCancelsPerPage",
+          "type": "uint256"
+        }
+      ],
+      "name": "takeLimitThenMake",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fromAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "limitPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxCancels",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxCancelsPerPage",
+          "type": "uint256"
+        }
+      ],
+      "name": "takeLimitThenReturn",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
     }
-]
+  ]

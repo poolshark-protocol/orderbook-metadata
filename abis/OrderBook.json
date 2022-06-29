@@ -312,6 +312,16 @@
         "internalType": "uint256",
         "name": "limitPrice",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxCancelsPerPage",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxCancelsTotal",
+        "type": "uint256"
       }
     ],
     "name": "quoteExactAmountOut",

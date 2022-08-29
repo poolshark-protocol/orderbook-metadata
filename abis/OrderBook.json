@@ -128,19 +128,6 @@
       "type": "event"
     },
     {
-      "inputs": [],
-      "name": "admin",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "inputs": [
         {
           "internalType": "bytes32",
@@ -195,19 +182,42 @@
     {
       "inputs": [
         {
-          "internalType": "bytes32[]",
-          "name": "pagePtrs",
-          "type": "bytes32[]"
+          "internalType": "uint256[]",
+          "name": "pagePrices",
+          "type": "uint256[]"
         },
         {
           "internalType": "uint256[]",
           "name": "endOffsets",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "claimTokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
           "type": "uint256[]"
         }
       ],
       "name": "claimOrders",
       "outputs": [],
       "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "factory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -354,16 +364,6 @@
           "type": "uint256"
         },
         {
-          "internalType": "bytes32",
-          "name": "startPagePtr",
-          "type": "bytes32"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancels",
-          "type": "uint256"
-        },
-        {
           "internalType": "bool",
           "name": "makerOnly",
           "type": "bool"
@@ -412,12 +412,12 @@
       "outputs": [
         {
           "internalType": "uint256",
-          "name": "fromAmount",
+          "name": "fromAmountIn",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "estimatedGas",
+          "name": "destAmountOut",
           "type": "uint256"
         }
       ],
@@ -488,158 +488,6 @@
       "type": "function"
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "fromToken",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "fromAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "destAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "limitPrice",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes32",
-          "name": "startPagePtr",
-          "type": "bytes32"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancels",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancelsPerPage",
-          "type": "uint256"
-        }
-      ],
-      "name": "takeLimitThenMake",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "fromAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "destAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "address",
-          "name": "fromToken",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "limitPrice",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancels",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancelsPerPage",
-          "type": "uint256"
-        }
-      ],
-      "name": "takeLimitThenReturn",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "fromAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "destAmount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "address",
-          "name": "fromToken",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "limitPrice",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancels",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancelsPerPage",
-          "type": "uint256"
-        }
-      ],
-      "name": "takeMarketThenReturn",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
       "inputs": [],
       "name": "token0",
       "outputs": [
@@ -665,4 +513,4 @@
       "stateMutability": "view",
       "type": "function"
     }
-]
+  ]

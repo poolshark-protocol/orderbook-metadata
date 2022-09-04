@@ -131,7 +131,7 @@
       "inputs": [
         {
           "internalType": "bytes32",
-          "name": "pagePtr",
+          "name": "pageKey",
           "type": "bytes32"
         },
         {
@@ -160,7 +160,7 @@
       "inputs": [
         {
           "internalType": "bytes32[]",
-          "name": "pagePtrs",
+          "name": "pageKeys",
           "type": "bytes32[]"
         },
         {
@@ -456,12 +456,12 @@
       "outputs": [
         {
           "internalType": "uint256",
-          "name": "destAmountOut",
+          "name": "fromAmountIn",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "fromAmountOut",
+          "name": "destAmountOut",
           "type": "uint256"
         }
       ],

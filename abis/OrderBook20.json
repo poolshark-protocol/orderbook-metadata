@@ -364,6 +364,11 @@
           "type": "uint256"
         },
         {
+          "internalType": "uint256",
+          "name": "limitPrice",
+          "type": "uint256"
+        },
+        {
           "internalType": "bool",
           "name": "makerOnly",
           "type": "bool"
@@ -378,7 +383,7 @@
       "outputs": [
         {
           "internalType": "uint256",
-          "name": "fromAmountOut",
+          "name": "fromAmountIn",
           "type": "uint256"
         },
         {
@@ -388,6 +393,99 @@
         }
       ],
       "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "orders",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "page",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startOffset",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "endOffset",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "nextCancelPtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "overflowCounter",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "pages",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "currentOffset",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "latestOrder",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "nextPage",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "prevPage",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "newestCancelPtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "oldestCancelPtr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "overflowCounter",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -439,16 +537,6 @@
         {
           "internalType": "uint256",
           "name": "limitPrice",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancelsPerPage",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "maxCancelsTotal",
           "type": "uint256"
         }
       ],

@@ -62,7 +62,7 @@
           "type": "bytes32"
         }
       ],
-      "name": "booksMap",
+      "name": "books",
       "outputs": [
         {
           "internalType": "address",

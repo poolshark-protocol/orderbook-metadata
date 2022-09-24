@@ -37,6 +37,14 @@
         "OrderBook20Router": {
             "address": "0xc70AbcAa365c4904ECb47c26CA5B502a7FEA2d5D",
             "created": "2022-09-24T04:06:35.808Z"
+        },
+        "OrderBook1155To20Factory": {
+            "address": "0x13E9c4821F85B1F17b90CD8D70169413eB5caceB",
+            "created": "2022-09-24T15:31:10.830Z"
+        },
+        "OrderBook1155To20Router": {
+            "address": "0xD6Fb0357570fe01ad3dE5Ca44Afa2Af884890976",
+            "created": "2022-09-24T15:31:10.831Z"
         }
     }
 }
